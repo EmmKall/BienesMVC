@@ -1,0 +1,21 @@
+{
+    "name": "emmkall/bienesraices",
+    "description": "bienes raices con POO",
+    "authors": [
+        {
+            "name": "emmkall",
+            "email": "ing.emmanuel.cal@gmail.com"
+        }
+    ],
+    
+    "autoload": {
+        "psr-4": {
+            "Model\\": "./models",
+            "MVC\\": "./",
+            "Controllers\\" : "./controllers"
+        }
+    },
+    "require": {
+        "intervention/image": "^2.5"
+    }
+}

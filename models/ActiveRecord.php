@@ -68,7 +68,6 @@ class ActiveRecord{
     public function guardar(){
         
         $atributos = $this->sanitizar();
-        
         if( isset($this->P_Id) || isset($this->V_Id) ){
             $sql = $this->actualizar($atributos);
         } else {
@@ -93,9 +92,11 @@ class ActiveRecord{
         foreach ($atributos as $key => $value) {
             $valores[] = "${key} = '${value}'";
         }
+        if(isset($this->P_Id)) $id = self::$db->escape_string($this->P_Id);
+        else if(isset ($this->V_Id)) $id = self::$db->escape_string($this->V_Id);
         $sql = "UPDATE " . static::$tabla ." SET ";
         $sql .= join(", ", $valores);
-        $sql .= " WHERE " . static::$id . " = " . self::$db->escape_string($this->P_Id) ?? self::$db->escape_string($this->V_Id) . ";";
+        $sql .= " WHERE " . static::$id . " = " . $id . ";";
         return $sql;
     }
 
@@ -117,8 +118,8 @@ class ActiveRecord{
 
     public function getId(){
         $clase = get_class($this);
-        if($clase === 'App\Vendedor') $id = $this->V_Id;
-        else if($clase === 'App\Propiedad') $id = $this->P_Id;
+        if($clase === 'Model\Vendedor') $id = $this->V_Id;
+        else if($clase === 'Model\Propiedad') $id = $this->P_Id;
         return $id;    
     }
 

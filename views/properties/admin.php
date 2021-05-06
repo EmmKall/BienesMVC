@@ -10,6 +10,8 @@
                 <div class="contenedor"> <p class="alerta exito">Se Ha Modificado el Registro Correctamente</p> </div>
              <?php elseif($res === 3): ?>
                 <div class="contenedor"> <p class="alerta exito">Se Ha Eliminadox el Registro Correctamente</p> </div>
+            <?php elseif($res === 4): ?>
+                <div class="contenedor"><p class="alerta error">Hubo un error</p></div>
            <?php endif;
         }
 
@@ -62,7 +64,7 @@
                     <td>$<?php echo $registro->P_Precio; ?></td>
                     <td>
                         <a href="/property/update?id=<?php echo $registro->P_Id; ?>" class="boton boton-amarillo-block">Editar</a>
-                        <form action="" method="POST" class="w-100">
+                        <form action="/property/delete" method="POST" class="w-100">
                             <input type="hidden" name="imagen" value="<?php echo $registro->P_Imagen; ?>">
                             <input type="hidden" name="id" value="<?php echo $registro->P_Id; ?>">
                             <input type="hidden" name="tipo" value="propiedad">
@@ -106,7 +108,7 @@
                     <th><?php echo $vendedor->V_Telefono; ?></th>
                     <th>
                         <a href="/seller/update?id=<?php echo $vendedor->V_Id; ?>" class="boton boton-amarillo">Editar</a>
-                        <form action="" method="POST" class="w-100">
+                        <form action="/seller/delete" method="POST" class="w-100">
                             <input type="hidden" name="id" value="<?php echo $vendedor->V_Id; ?>">
                             <input type="hidden" name="tipo" value="vendedor">
                             <input type="submit" value="Eliminar" class="boton boton-rojo">

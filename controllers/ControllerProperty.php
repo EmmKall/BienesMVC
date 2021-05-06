@@ -106,8 +106,28 @@ class ControllerProperty{
                                               'id' => $id]);
     }
 
-    public static function delete(Router $router){
-        debugear('Delete property');
+    public static function delete( )
+    {
+        $res = 0;
+
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+            $id = filter_var($_POST['id'], FILTER_VALIDATE_INT); 
+            if( $id )
+            {
+                $tipo = $_POST['tipo'];
+
+                if(validarTipoContenido($tipo)){
+                    $registro = Propiedad::find($id);
+                    $resultado = $registro->eliminar();
+                    if($resultado){
+                        header('location: /admin?res=3');
+                    } else {
+                        header('location: /admin?res=4');
+                    }
+                }
+            }
+        }
     }
 
 

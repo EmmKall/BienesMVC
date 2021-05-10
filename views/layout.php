@@ -19,7 +19,7 @@ if(!isset($inicio)){ $inicio = false; }
 </head>
 <body>
     
-<header class="header <?php echo ($inicio) ? 'inicio' : ''; ?>">
+<header id="header" class="header <?php echo ($inicio) ? 'inicio' : ''; ?>">
     <div class="contenedor contenido-header">
         <div class="barra">
             <a href="/">
@@ -38,7 +38,7 @@ if(!isset($inicio)){ $inicio = false; }
                     <a href="/blog">Blog</a>
                     <a href="/contacto">Contacto</a>
                     <?php  if(isset($auth) && $auth): ?>
-                    <a href="/cerrar-sesion">Cerrar Sesión</a>
+                    <a href="/cerrar">Cerrar Sesión</a>
                   <?php endif; ?>
                 </nav>
             </div>

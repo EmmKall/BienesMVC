@@ -25,24 +25,24 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-dev',
+    'version' => 'dev-dev',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => 'cc9ba54769c1f59b122f1d2f7f0e38436bf2de7f',
     'name' => 'emmkall/bienesraices',
   ),
   'versions' => 
   array (
     'emmkall/bienesraices' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-dev',
+      'version' => 'dev-dev',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => 'cc9ba54769c1f59b122f1d2f7f0e38436bf2de7f',
     ),
     'guzzlehttp/psr7' => 
     array (
@@ -61,6 +61,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'abbf18d5ab8367f96b3205ca3c89fb2fa598c69e',
+    ),
+    'phpmailer/phpmailer' => 
+    array (
+      'pretty_version' => 'v6.4.1',
+      'version' => '6.4.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9256f12d8fb0cd0500f93b19e18c356906cbed3d',
     ),
     'psr/http-message' => 
     array (

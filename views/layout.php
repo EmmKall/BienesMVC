@@ -37,8 +37,8 @@ if(!isset($inicio)){ $inicio = false; }
                     <a href="/propiedades">Anuncios</a>
                     <a href="/blog">Blog</a>
                     <a href="/contacto">Contacto</a>
-                    <?php  if(isset($auth) && $auth): ?>
-                    <a href="/cerrar">Cerrar Sesión</a>
+                    <?php  if($_SESSION['login'] === true): ?>
+                    <a href="/logout">Cerrar Sesión</a>
                   <?php endif; ?>
                 </nav>
             </div>

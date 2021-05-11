@@ -8,13 +8,11 @@ class Vendedor extends ActiveRecord{
     protected static $id = 'V_Id';
     protected static $columnasDB = ['V_Id', 'V_Nombre', 'V_Apellido', 'V_Telefono'];
 
-    //Atributos
     public $V_Id;
     public $V_Nombre;
     public $V_Apellido;
     public $V_Telefono;
 
-    //Consutrctor
     public function __construct($args = [])
     {
         $this -> V_Id = $args['V_Id'] ?? null;
@@ -24,7 +22,6 @@ class Vendedor extends ActiveRecord{
     }
 
     //Métodos
-    //Validar
     public function validarDatos(){
         //Comprobar que no esten vacias
         if($this->V_Nombre === '') {self::$errores[] = 'Nombre Obligatorio';}

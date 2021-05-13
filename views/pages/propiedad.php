@@ -1,5 +1,5 @@
 <main class="contenedor seccion contenido-centrado">
-    <h1><?php echo $property->P_Titulo; ?></h1>
+    <h1 data-cy="titulo-propiedad"><?php echo $property->P_Titulo; ?></h1>
     <picture>
         <!-- <source srcset="build/img/destacada.webp" type="image/webp"> -->
         <source srcset="../images/<?php echo $property->P_Imagen; ?>" type="image/jpeg">

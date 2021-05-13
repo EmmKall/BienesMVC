@@ -32,7 +32,7 @@ if(!isset($inicio)){ $inicio = false; }
 
             <div class="derecha">
                 <img class="dark-mode-boton" src="../build/img/dark-mode.svg">
-                <nav class="navegacion">
+                <nav meta-cy="nave-header" class="navegacion">
                     <a href="/nosotros">Nosotros</a>
                     <a href="/propiedades">Anuncios</a>
                     <a href="/blog">Blog</a>
@@ -45,7 +45,7 @@ if(!isset($inicio)){ $inicio = false; }
                    
         </div> <!--.barra-->
         <?php if(isset($inicio) && $inicio === true): ?>
-        <h1>Venta de Casas y Departamentos  Exclusivos de Lujo</h1>
+        <h1 data-cy='heading-sitio' >Venta de Casas y Departamentos  Exclusivos de Lujo</h1>
         <?php endif; ?>
     </div>
 </header>
@@ -56,11 +56,11 @@ if(!isset($inicio)){ $inicio = false; }
 
 <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
-            <nav class="navegacion">
-                <a href="nosotros.php">Nosotros</a>
-                <a href="anuncios.php">Anuncios</a>
-                <a href="blog.php">Blog</a>
-                <a href="contacto.php">Contacto</a>
+            <nav meta-cy="nave-footer" class="navegacion">
+                <a href="/nosotros">Nosotros</a>
+                <a href="/anuncios">Anuncios</a>
+                <a href="/blog">Blog</a>
+                <a href="/contacto">Contacto</a>
             </nav>
         </div>
 

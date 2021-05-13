@@ -1,20 +1,18 @@
 <main class="contenedor seccion">
-    <h1>Más Sobre Nosotros</h1>
+    <h2 data-cy="subheading-index">Más Sobre Nosotros</h2>
 
     <?php include_once 'iconos.php' ?>
 </main>
 
-<?php
-    include_once 'anuncio_template.php';
-?>
+<?php include_once 'anuncio_template.php'; ?>
 
-<section class="imagen-contacto">
+<section meta-cy="bloque-contato" class="imagen-contacto">
     <h2>Encuentra la casa de tus sueños</h2>
     <p>Llena el formulario de contacto y un asesor se pondrá en contacto contigo a la brevedad</p>
-    <a href="/contacto" class="boton-amarillo">Contactános</a>
+    <a meta-cy="boton-contacto" href="/contacto" class="boton-amarillo">Contactános</a>
 </section>
 
-<div class="contenedor seccion seccion-inferior">
+<div meta-cy="bloque-mas" class="contenedor seccion seccion-inferior">
         <section class="blog">
             <h3>Nuestro Blog</h3>
 

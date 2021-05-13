@@ -53,19 +53,19 @@ function mostrarMetodoContacto(e){
     {
         contactoDiv.innerHTML = `
         <label for="telefono">Teléfono</label>
-        <input type="tel" placeholder="Tu Teléfono" name="telefono" id="telefono" required>
+        <input meta-cy="tel" type="tel" placeholder="Tu Teléfono" name="telefono" id="telefono" required>
 
         <label for="fecha">Fecha:</label>
-        <input type="date" name="fecha" id="fecha" required>
+        <input meta-cy="fecha" type="date" name="fecha" id="fecha" required>
 
         <label for="hora">Hora:</label>
-        <input type="time" name="hora" id="hora" min="09:00" max="21:00" required>
+        <input meta-cy="hora" type="time" name="hora" id="hora" min="09:00" max="21:00" required>
         `;
     } else
     {
         contactoDiv.innerHTML = `
         <label for="email">E-mail</label>
-        <input type="email" placeholder="Tu Email" name="email" id="email" required>
+        <input data-cy="email" type="email" placeholder="Tu Email" name="email" id="email" required>
         `;
     }
 }

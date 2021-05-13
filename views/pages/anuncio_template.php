@@ -1,9 +1,9 @@
 <section class="seccion contenedor">
     <h2>Casas y Depas en Venta</h2>
 
-    <div class="contenedor-anuncios">
+    <div class="contenedor-anuncios" data-cy="bloque-anuncios">
         <?php foreach($properties as $property): ?>
-            <div class="anuncio">
+            <div class="anuncio" data-cy="anuncio">
                 <picture>
                     <!-- <source srcset="build/img/anuncio1.webp" type="image/webp"> -->
                     <source srcset="../images/<?php echo $property->P_Imagen;?>" type="image/jpeg">
@@ -29,7 +29,7 @@
                             <p><?php echo $property->P_Habitaciones; ?></p>
                         </li>
                     </ul>
-                    <a href="/propiedad?id=<?php echo $property->P_Id; ?>" class="boton-amarillo-block">Ver Propiedad</a>
+                    <a data-cy="enlace-anuncio" href="/propiedad?id=<?php echo $property->P_Id; ?>" class="boton-amarillo-block">Ver Propiedad</a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
         <?php endforeach; ?>
@@ -37,7 +37,7 @@
 
     <?php if(isset($inicio) && $inicio): ?>
         <div class="alinear-derecha">
-            <a href="/propiedades" class="boton-verde">Ver Todas</a>
+            <a data-cy="ver-todas" href="/propiedades" class="boton-verde">Ver Todas</a>
         </div>
     <?php endif; ?>
 </section>
